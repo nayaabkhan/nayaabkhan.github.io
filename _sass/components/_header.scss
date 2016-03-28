@@ -1,0 +1,70 @@
+.site-header {
+  height: 300px;
+  text-align: center;
+  color: #FFF;
+  background: $brand-color radial-gradient(circle at top center, #10EAAC 0%, #0CAC7E 100%);
+}
+
+.site-navigation {
+  position: relative;
+  height: 75px;
+  line-height: 75px;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+.site-navigation__list {
+  @extend %bare-list;
+  @extend %clearfix;
+}
+
+.site-navigation__item {
+  float: left;
+  margin: 0 15px;
+}
+
+.site-navigation__left {
+  position: absolute;
+  left: 0;
+}
+
+.site-navigation__right {
+  position: absolute;
+  right: 0;
+}
+
+.site-navigation__logo {
+  height: 75px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.site-navigation__logo svg {
+  display: inline-block;
+  width: 41px;
+  height: 41px;
+  margin: 17px;
+  fill: #FFF;
+}
+
+.site-hero__title {
+  margin-top: 58px;
+  margin-bottom: 0;
+  font-size: 38px;
+  font-weight: $font-weight-light;
+}
+
+.site-hero__subtitle {
+  margin-top: 0;
+  font-size: 16px;
+  font-weight: $font-weight-light;
+}
+
+.site-navigation__link {
+  color: inherit;
+
+  &:hover {
+    color: inherit;
+  }
+}

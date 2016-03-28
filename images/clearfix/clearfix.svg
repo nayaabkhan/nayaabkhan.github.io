@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.4, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="800px" height="450.664px" viewBox="0 0 800 450.664" enable-background="new 0 0 800 450.664" xml:space="preserve">
+<path fill="#F8F8F8" d="M800,445.335c0,2.943-2.238,5.328-5,5.328H5c-2.762,0-5-2.385-5-5.328V29.708c0-2.944,2.238-5.329,5-5.329
+	h790c2.762,0,5,2.385,5,5.329V445.335z"/>
+<path fill="#E2E2E1" d="M800,34.758V5.634C800,2.522,797.762,0,795,0H5C2.239,0,0,2.522,0,5.634v29.124H800z"/>
+<g>
+	<path fill="#EC5E5A" d="M21.374,18.245c0,3.387-2.652,6.134-5.92,6.134c-3.266,0-5.917-2.747-5.917-6.134
+		c0-3.387,2.651-6.133,5.917-6.133C18.723,12.112,21.374,14.858,21.374,18.245z"/>
+	<ellipse fill="#E8B25D" cx="35.489" cy="18.245" rx="5.918" ry="6.134"/>
+	<ellipse fill="#81C355" cx="55.619" cy="18.245" rx="5.918" ry="6.134"/>
+</g>
+<rect x="33.659" y="68.141" fill="#E5E5E5" width="200.98" height="180.697"/>
+<rect x="564.676" y="68.141" fill="#E5E5E5" width="200.982" height="180.697"/>
+<rect x="299.663" y="68.141" fill="#E5E5E5" width="199.992" height="180.697"/>
+<rect x="33.659" y="68.141" opacity="0.4" fill="#9EC3E4" width="732" height="180.697"/>
+</svg>

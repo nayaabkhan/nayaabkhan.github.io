@@ -1,0 +1,25 @@
+.sub-navigation {
+  border-bottom: 1px solid #F0F0F0;
+  height: 60px;
+  text-align: center;
+  font-size: 0;
+  background-color: $page-color;
+}
+
+.sub-navigation__list {
+  @extend %bare-list;
+}
+
+.sub-navigation__item {
+  display: inline-block;
+  margin: 0 15px;
+  text-transform: uppercase;
+  font-size: 11px;
+}
+
+.sub-navigation__link {
+  display: block;
+  height: 60px;
+  line-height: 60px;
+  color: $text-color;
+}

@@ -1,0 +1,36 @@
+.post-listing {
+  @extend %bare-list;
+
+  text-align: center;
+}
+
+.post-listing__item {
+  padding: 60px 0;
+  border-bottom: 1px solid $border-color;
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.post-listing__date {
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+.post-listing__title {
+  margin: 0 0 5px 0;
+  text-transform: uppercase;
+  font-weight: $font-weight-normal;
+  font-size: 28px;
+}
+
+.post-listing__excerpt {
+  font-weight: $font-weight-light;
+}
+
+.post-listing__more {
+  text-transform: uppercase;
+  font-size: 12px;
+}

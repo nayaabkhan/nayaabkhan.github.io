@@ -1,0 +1,9 @@
+.post__content {
+  font-weight: $font-weight-light;
+}
+
+.post__content h2,
+.post__content h3,
+.post__content h4 {
+  margin-bottom: $base-spacing/2;
+}
