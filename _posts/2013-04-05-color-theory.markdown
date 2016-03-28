@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Color Theory
-synopsis: Color plays an important role in design in general. However, you have to be more mindful of color when you use it on the web, as there are a lot of usability problems that can arise from its misuse.
+category: React
 date: April 5, 2013
 ---
 

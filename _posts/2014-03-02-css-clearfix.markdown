@@ -1,7 +1,7 @@
 ---
 layout: post
 title: CSS Clearfix
-synopsis: Floats are used almost in any complex layout these days. In this post we see how to use floats correctly and see a SASS mixin which we can use to clear the floats for the parent containers.
+category: Opinion
 date: March 2, 2014
 ---
 

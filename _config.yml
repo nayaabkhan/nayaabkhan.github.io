@@ -1,26 +1,23 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely need to edit after that.
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'jekyll serve'. If you change this file, please restart the server process.
+# general description
+title:              NayaabKhan
+subtitle:           Thoughts of a frontend developer. Also rants.
+description:        Nayaabkhan is a Team Leader and a Frontend developer at StarOfService.com. He writes about React, Redux, Design and DIY.
 
-# Site settings
-title: NayaabKhan
-subtitle: Thoughts of a frontend developer. Also rants.
-email: khannayaab@gmail.com
-description: > # this means to ignore newlines until "baseurl:"
-  Nayaabkhan is a Team Leader and a Frontend developer at StarOfService.com.
-  He writes about React, Redux, Design and DIY.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://nayaabkhan.in" # the base hostname & protocol for your site
-twitter_username: iamnayaabkhan
-github_username:  nayaabkhan
-facebook_username: nayaab.in
+# site settings
+baseurl:
+url:                http://nayaabkhan.in
+permalink:          /:categories/:title
 
-# Build settings
-markdown: kramdown
+# social
+twitter_username:   iamnayaabkhan
+github_username:    nayaabkhan
+facebook_username:  nayaab.in
+email:              khannayaab@gmail.com
+
+# build settings
+markdown:           kramdown
 kramdown:
-  input: GFM
-  hard_wrap: false
-  highlighter: rouge
+  input:            GFM
+  hard_wrap:        false
+  highlighter:      rouge
+exclude:            ['LICENSE', 'README.md']

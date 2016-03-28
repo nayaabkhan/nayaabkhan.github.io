@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Thinking with Type
-synopsis: I just finished reading "Thinking with Type" by Ellen Lupton and I feel it is an indispensible guide for any typographer and even for any Web designer. So I thought of sharing a review with you all guys.
+category: Design
 date: January 24, 2013
 ---
 

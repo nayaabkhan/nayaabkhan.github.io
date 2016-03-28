@@ -11,6 +11,7 @@
 }
 
 .sub-navigation__item {
+  position: relative;
   display: inline-block;
   margin: 0 15px;
   text-transform: uppercase;
@@ -22,4 +23,8 @@
   height: 60px;
   line-height: 60px;
   color: $text-color;
+}
+
+.sub-navigation__item--active a {
+  color: $brand-color;
 }
