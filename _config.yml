@@ -20,4 +20,6 @@ kramdown:
   input:            GFM
   hard_wrap:        false
   highlighter:      rouge
+sass:
+  style:            :compressed
 exclude:            ['LICENSE', 'README.md']
