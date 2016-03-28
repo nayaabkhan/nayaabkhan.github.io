@@ -14,7 +14,7 @@ I won't get too scientific, as I want to keep this relevant to web design. Let's
 
 ![Color Wheel]({{ site.baseurl }}/images/color-wheel.jpg)
 
-###The Color Wheel
+### The Color Wheel
 
 In 1666, <a href="http://en.wikipedia.org/wiki/Isaac_Newton" target="_blank">Sir Isaac Newton</a> developed the first circular diagram of colors. The color wheel, based on red, yellow and blue, is still the basis for most color theory.
 
@@ -24,7 +24,7 @@ There are 3 important sections of the color wheel:
 * **Secondary Colors** are made by mixing two primary colors in a given color space and include colors like green, orange and purple.
 * **Tertiary Colors** are made by mixing either a primary color with a secondary color or two secondary colors. Some examples include yellow-orange, red-orange, red-purple and blue-purple.
 
-###Choosing Colors
+### Choosing Colors
 
 Choosing colors is extremely important and worth the effort to consider them carefully. Colors carry different meanings around the world.
 
@@ -53,7 +53,7 @@ Here is her quick reference guide for some common meanings of color that I find 
 * **Tan or Beige:** Conservative, Piety, Dull
 * **Cream or Ivory:** Calm, Elegant, Purity
 
-###Using Color in Web Design
+### Using Color in Web Design
 
 Color can be a great tool to enhance user experience and improve usability. Using color for links and buttons is a great way to communicate to the user that an action is available. Links should be obvious and clearly defined or the user might miss them entirely. For this reason, I typically use bright colors, like red, green, purple or orange, for links.
 
@@ -67,7 +67,7 @@ Colors like red and gray can be used for deleting, closing and archiving. Red is
 
 There isn't a right or wrong answer here. I have seen plenty of websites break the rules and still work. The point is to stay consistent so the user can easily recognize what color is associated with what action.
 
-###Color Tools
+### Color Tools
 
 There are a lot of great resources to help you pick color palettes. I use these all the time for inspiration and to help me find matching or complimentary colors:
 
@@ -80,7 +80,7 @@ is an online resource that's useful for finding different color variations and c
 * <a href="http://pltts.me/" target="_blank">PLTTS</a> makes it's easy to find matching color-palettes for your project. Thanks Chris!
 * <a href="http://www.blendoku.com/" target="_blank">Blendoku</a> is puzzle game that will challenge your ability to distinguish and arrange colors. The game is based on color principles and exercises taught in art schools around the world.
 
-##While there is a science behind color theory, it's also very much an art.
+## While there is a science behind color theory, it's also very much an art.
 
 Learning to use color in your designs takes practice and a bit of innate taste. I'm still learning about and playing with color, but I really love its meanings and I'm fascinated by how easily it can change a design.
 

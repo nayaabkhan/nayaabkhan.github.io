@@ -49,7 +49,7 @@ Fortunately there's a popular clearfix, made by <a href="http://nicolasgallagher
 
 In the above example, you can see how it would look when all the elements properly clear—the height is no longer collapsed. Using a clearfix in this way, however, adds additional markup and creates a lot of repetitive CSS.
 
-###Sass Clearfix
+### Sass Clearfix
 
 <a href="{{ site.url }}/scss/" target="_blank">Sass brings a bunch of benefits</a> over plain 'ole CSS like nesting and <code>@extend</code>, which we can use to make a better clearfix. <code>@extend</code> basically tells Sass that one selector should inherit the styles of another selector.
 
@@ -88,7 +88,7 @@ Sass supports the special placeholder selector <code>%</code>, a silent class, w
 
 By using Sass we end up with a much cleaner/simpler approach. We no longer have to add the clearfix class to our markup instead we just <code>@extend</code> anywhere a clearfix is needed.
 
-###Resources
+### Resources
 
 * <a href="http://nicolasgallagher.com/micro-clearfix-hack/" target="_blank">A New Micro Clearfix Hack</a>
 * <a href="http://css-tricks.com/all-about-floats/" target="_blank">All About Floats</a>
