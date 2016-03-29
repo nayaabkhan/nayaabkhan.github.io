@@ -1,4 +1,5 @@
 .sub-navigation {
+  border-top: 1px solid #F0F0F0;
   border-bottom: 1px solid #F0F0F0;
   height: 60px;
   text-align: center;
@@ -23,6 +24,10 @@
   height: 60px;
   line-height: 60px;
   color: $text-color;
+
+  &:hover {
+    color: $brand-color;
+  }
 }
 
 .sub-navigation__item--active a {

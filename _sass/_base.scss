@@ -38,11 +38,12 @@ ul, ol, dl, figure, table,
  * Links
  */
 a {
+  transition: .4s color;
   text-decoration: none;
   color: $brand-color;
 
   &:hover {
-    color: darken($brand-color, 10%);
+    color: darken($brand-color, 20%);
   }
 }
 

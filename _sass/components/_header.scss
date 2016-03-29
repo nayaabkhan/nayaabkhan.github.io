@@ -1,8 +1,7 @@
 .site-header {
-  height: 300px;
   text-align: center;
-  color: #FFF;
-  background: $brand-color radial-gradient(circle at top center, #10EAAC 0%, #0CAC7E 100%);
+  color: $brand-color;
+  background: #FFF;
 }
 
 .site-navigation {
@@ -40,23 +39,26 @@
   text-align: center;
 }
 
-.site-navigation__logo svg {
+.site-navigation__logo a {
   display: inline-block;
+}
+
+.site-navigation__logo svg {
   width: 41px;
   height: 41px;
   margin: 17px;
-  fill: #FFF;
+  fill: $brand-color;
 }
 
 .site-hero__title {
-  margin-top: 58px;
-  margin-bottom: 0;
+  margin: 58px 0 0;
   font-size: 38px;
   font-weight: $font-weight-light;
 }
 
 .site-hero__subtitle {
-  margin-top: 0;
+  margin: 0;
+  padding-bottom: 97px;
   font-size: 16px;
   font-weight: $font-weight-light;
 }
