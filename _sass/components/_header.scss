@@ -55,6 +55,11 @@
   height: 41px;
   margin: 17px;
   fill: $brand-color;
+  transition: .4s fill;
+
+  &:hover {
+    fill: $accent-color;
+  }
 }
 
 .site-hero__title {
