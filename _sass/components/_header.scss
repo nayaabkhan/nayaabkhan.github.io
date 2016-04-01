@@ -1,6 +1,5 @@
 .site-header {
   text-align: center;
-  color: $brand-color;
   background: #FFF;
 }
 
@@ -32,6 +31,14 @@
   right: 0;
 }
 
+.site-navigation__link {
+  color: inherit;
+
+  &:hover {
+    color: $brand-color;
+  }
+}
+
 .site-navigation__logo {
   height: 75px;
   margin-left: auto;
@@ -53,7 +60,7 @@
 .site-hero__title {
   margin: 58px 0 0;
   font-size: 38px;
-  font-weight: $font-weight-light;
+  color: $brand-color;
 }
 
 .site-hero__subtitle {
@@ -61,12 +68,4 @@
   padding-bottom: 97px;
   font-size: 16px;
   font-weight: $font-weight-light;
-}
-
-.site-navigation__link {
-  color: inherit;
-
-  &:hover {
-    color: inherit;
-  }
 }

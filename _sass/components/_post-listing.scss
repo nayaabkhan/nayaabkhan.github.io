@@ -9,26 +9,24 @@
   &:last-child {
     border-bottom: none;
   }
+
+  a {
+    display: block;
+    color: inherit;
+  }
 }
 
 .post-listing__date {
-  margin-bottom: 30px;
-  text-transform: uppercase;
-  font-size: 12px;
+  font-size: 14px;
+  color: lighten($text-color, 30%);
+  font-weight: $font-weight-light;
 }
 
 .post-listing__title {
-  margin: 0 0 5px 0;
-  text-transform: uppercase;
   font-weight: $font-weight-normal;
   font-size: 28px;
 }
 
 .post-listing__excerpt {
   font-weight: $font-weight-light;
-}
-
-.post-listing__more {
-  text-transform: uppercase;
-  font-size: 12px;
 }
