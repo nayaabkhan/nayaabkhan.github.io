@@ -40,10 +40,10 @@ ul, ol, dl, figure, table,
 a {
   transition: .4s color;
   text-decoration: none;
-  color: $accent-color;
+  color: $brand-color;
 
   &:hover {
-    color: lighten($accent-color, 20%);
+    color: lighten($brand-color, 20%);
   }
 }
 

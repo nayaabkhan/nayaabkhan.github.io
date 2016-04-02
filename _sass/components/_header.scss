@@ -58,7 +58,7 @@
   transition: .4s fill;
 
   &:hover {
-    fill: $accent-color;
+    fill: lighten($brand-color, 7%);
   }
 }
 
