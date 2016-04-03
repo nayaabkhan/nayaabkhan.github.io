@@ -5,7 +5,7 @@ description:        Nayaabkhan is a Team Leader and a Frontend developer at Star
 
 # site settings
 baseurl:
-url:                http://nayaabkhan.in
+url:                http://nayaabkhan.me
 permalink:          /:categories/:title
 
 # social
