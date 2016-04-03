@@ -1,3 +1,5 @@
+$post-sharer-border-length: 60px;
+
 .post__content {
   font-weight: $font-weight-light;
 }
@@ -7,4 +9,31 @@
 .post__content h4 {
   margin-top: $base-spacing * 1.5;
   margin-bottom: $base-spacing / 1.5;
+}
+
+.post__sharer {
+  position: relative;
+  margin-top: 60px;
+  padding-top: 60px;
+  text-align: center;
+
+  :before {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-$post-sharer-border-length/2);
+    content: "";
+    width: $post-sharer-border-length;
+    height: 1px;
+    background-color: $border-color;
+  }
+}
+
+.post__sharer__title {
+  margin-bottom: 5px;
+}
+
+.post__sharer__subtitle {
+  opacity: 0.5;
+  font-weight: $font-weight-light;
 }

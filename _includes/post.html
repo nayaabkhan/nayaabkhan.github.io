@@ -4,4 +4,12 @@
     {{ include.post.content }}
   </div>
 
+  <div class="post__sharer">
+    <h3 class="post__sharer__title">Liked what you read?</h3>
+    <h4 class="post__sharer__subtitle">Then help spread it.</h4>
+
+    {% capture full_url %}{{ include.post.url | prepend: site.url }}{% endcapture %}
+    {% include tweet-button.html text=include.post.title url=full_url via=site.twitter_username related=site.twitter_username %}
+  </div>
+
 </article>
