@@ -1,7 +1,7 @@
 {% capture title %}{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}{% endcapture %}
 {% capture description %}{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines }}{% else %}{{ site.description }}{% endif %}{% endcapture %}
 {% capture url %}{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}{% endcapture %}
-{% capture image %}{% if page.slug %}{{ page.slug | prepend: '/images/article-thumbs/' | prepend: site.baseurl | prepend: site.url | append: '.svg' }}{% endif %}{% endcapture %}
+{% capture image %}{% if page.slug %}{{ page.slug | prepend: '/images/article-thumbs/' | prepend: site.baseurl | prepend: site.url | append: '.png' }}{% endif %}{% endcapture %}
 
 <!DOCTYPE html>
 <html>
