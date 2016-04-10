@@ -9,20 +9,36 @@
   &:last-child {
     border-bottom: none;
   }
+}
 
-  a {
-    display: block;
+.post-listing__link {
+  display: block;
+  color: inherit;
+
+  &:hover {
     color: inherit;
   }
 }
 
+.post-listing__meta {
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: $font-weight-bold;
+}
+
+.post-listing__date,
+.post-listing__category,
+.post-listing__comment-count {
+  display: inline-block;
+  margin-right: 12px;
+}
+
 .post-listing__date {
-  font-size: 14px;
   color: lighten($text-color, 30%);
-  font-weight: $font-weight-light;
 }
 
 .post-listing__title {
+  margin-top: 0;
   font-weight: $font-weight-normal;
   font-size: 28px;
 }

@@ -1,7 +1,7 @@
 <ul class="post-listing">
   {% for post in include.posts %}
     <li class="post-listing__item">
-      <a href="{{ post.url | prepend: site.baseurl }}">
+      <a href="{{ post.url | prepend: site.baseurl }}" class="post-listing__link">
         <h2 class="post-listing__title">
           {{ post.title }}
         </h2>
@@ -9,9 +9,16 @@
         <p class="post-listing__excerpt">
           {{ post.excerpt | strip_html }}
         </p>
-
-        <div class="post-listing__date">{{ post.date | date: "%B %-d, %Y" }}</div>
       </a>
+
+      <div class="post-listing__meta">
+        <div class="post-listing__date">{{ post.date | date: "%B %-d, %Y" }}</div>
+        <div class="post-listing__category"><a href="{{ post.categories | first | slugify | prepend: site.base_url }}">{{ post.categories | first }}</a></div>
+        <div class="post-listing__comment-count"><a href="{{ post.url | prepend: site.url }}#disqus_thread"></a></div>
+      </div>
     </li>
   {% endfor %}
+
 </ul>
+
+<script id="dsq-count-scr" src="//nayaabkhan-me.disqus.com/count.js" async></script>
