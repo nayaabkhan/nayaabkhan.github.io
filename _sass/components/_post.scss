@@ -1,5 +1,19 @@
 $post-sharer-border-length: 60px;
 
+.post-heading {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.post-heading__title {
+  margin-bottom: 0;
+  font-size: 26px;
+}
+
+.post-heading__date {
+  font-weight: $font-weight-light;
+}
+
 .post__content {
   font-weight: $font-weight-light;
 }
@@ -9,6 +23,7 @@ $post-sharer-border-length: 60px;
 .post__content h4 {
   margin-top: $base-spacing * 1.5;
   margin-bottom: $base-spacing / 1.5;
+  text-align: center;
 }
 
 .post__sharer {
