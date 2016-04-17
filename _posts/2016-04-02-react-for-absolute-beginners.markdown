@@ -13,7 +13,7 @@ I feel that learning it the right way– learning its concepts in the correct or
 
 In this article, we will try to understand the React way of doing things starting with bare basics. And building up to the point where we can see why React does what it does.
 
-## React is just a view library
+### React is just a view library
 
 There, I said it. Yes, never ever forget that. It is just a view library. It is the "V" in the "MVC". Treat it like that. You create UI elements with it. They are called components.
 
@@ -63,7 +63,7 @@ var Logo = React.createClass({
 
 Not too shabby isn't it. I am sure you can see the correlation. I recommend beginners to write a few components without JSX. That way, you would really appreciate how much JSX does for you and might even write better JSX as a result.
 
-## How to use components
+### How to use components
 
 So, you might say "Alright, we made a component. How do we put it on a page?". On the page, we shall put it, sir!
 
@@ -113,7 +113,7 @@ ReactDOM.render(
 
 The first half of the code must look familiar to you by now. But the second half is what's going to make our Logo component show up on the page. So, save this file and load up the page in your browser. You should be greeted with the React logo in all its glory. A job well done compadre. Let's move on.
 
-## Props: Making customisable components
+### Props: Making customisable components
 
 Okay, so our logo is visible and looks good. How about making it possible to specify a size for it? `props` is the answer. We can pass props to a React component and alter its markup based on the values of those props.
 
@@ -146,7 +146,7 @@ Pretty simple eh? Some new concepts here:
 
 Now we have made our Logo component customizable. Cool.
 
-## But what about dynamic components?
+### But what about dynamic components?
 
 You must be thinking the same, isn't it? Worry not, we'll talk about the most important class of components now– components that change over time.
 
@@ -204,7 +204,7 @@ A lot of new constructs here. Nothing too complicated going on, though. We have 
 
 Now you know how to write dynamic components. We didn't need any two-way binding. We did it with more explicit code. And we can easily tell how and when the state changes, just look for `setState()`!
 
-## So why Virtual DOM and Diffing?
+### So why Virtual DOM and Diffing?
 
 Okay, so the moment of truth. You might want to think about what happens exactly when you change state using `setState`. You say that the counter increments or decrements. Well in reality, React changes the state and re-renders the whole component! Yes, it just goes about re-rendering it without doing anything else.
 
@@ -216,12 +216,12 @@ Doing all of this on actual DOM would be slow as hell. JavaScript is fast. This 
 
 In our example, the `span` holding the `currentValue` is the one that keeps on changing. On each increment or decrement, React just does a `setTextContent` operation on that `span`.
 
-## But why just re-render like a dumbo?
+### But why just re-render like a dumbo?
 
 Well because it's fucking simple. It just renders the output based on the state and props. Your components remain predictable because nothing else besides props and state could affect the output. It provides you with a simple mental model.
 
 The only thing React needs to manage well is the way it comes up with the minimal number of DOM operations needed to update a component. And I think the React engineers have done an amazing job with it.
 
-## Fin.
+### Fin.
 
 To end I would like to tell you that React is not about Virtual DOM or DOM diffing, but it is about the way it makes you think about apps as you write them. You will think of keeping them simple, composable and reusable. We will see these in action soon in a follow-up article about the philosohpy behind React.
