@@ -328,4 +328,4 @@ I hope I was able to convince you that writing Unit tests for your React compone
 
 Avoid using tools that are feature bloated and don't play well with others. Focus your time and resources on testing itself, not on the distractions around the toolset.
 
-Source code for this article could be found [here](https://github.com/nayaabkhan/react-unit-testing).
+All the source code for this article could be found [here](https://github.com/nayaabkhan/react-unit-testing).
