@@ -5,7 +5,7 @@ category: React
 date: April 30, 2016
 ---
 
-React components are modular and composable. And Unit tests exist to tests software modules. Hence it makes sense React components a perfect candidate for Unit tests.
+React components are modular and composable. And Unit tests exist to tests software modules. Hence it makes React components a perfect candidate for Unit tests.
 
 
 ### Why Unit test?
@@ -297,6 +297,9 @@ If you run the tests now, you should see all of them passing with flying colors.
 That is all cool, but we haven't yet seen the most common and important part of running tests yet, failing. So let's say someone comes along and changes the `Star` component's active style from `star--active` to `star--is-active`, may be because it is more BEMMY™. The tests will fail with this report:
 
 {% highlight text %}
+> react-unit-testing@1.0.0 test /Users/nayaabkhan/Desktop/react-unit-testing
+> babel-node node_modules/.bin/tape tests/*.test.js | faucet
+
 ✓ Testing RatingWidget component output
 ⨯ Testing Star component output if isActive set
   not ok 2 Should be active
