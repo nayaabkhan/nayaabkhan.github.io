@@ -20,16 +20,16 @@ Shallow rendering of a component renders the component only one level deep. It d
 
 So, if you have a component hierachy like this:
 
-{% highlight js %}
+```js
 const Label = ({ text }) => <label>{text}</label>;
 const SubmitButton = ({ text }) => <button><Label text={text} /></button>;
-{% endhighlight %}
+```
 
 Shallow rendering the `<SubmitButton text="Hello" />` would produce:
 
-{% highlight js %}
+```js
 <button><Label text="Hello!" /></button>
-{% endhighlight %}
+```
 
 This allows your assertions to be simple and also encourages you to refactor you components into subcomponents once you feel testing a components is complex.
 
@@ -44,7 +44,7 @@ I use [Tape](https://github.com/substack/tape) as my testing framework. It doesn
 
 You want to see an example of a test with Tape?
 
-{% highlight js %}
+```js
 import test from 'tape';
 import { leftPad } from './utils';
 
@@ -56,7 +56,7 @@ test('leftPad output', (assert) => {
   assert.equal(actual, expected, message);
   assert.end();
 });
-{% endhighlight %}
+```
 
 We shall also use [Faucet](https://github.com/substack/faucet) to prettify the output Tape produces, which is in [TAP format](https://en.wikipedia.org/wiki/Test_Anything_Protocol).
 
@@ -75,7 +75,7 @@ We would also need `extend-tape` to extend the assertion API of Tape with `tape-
 
 We are going to test the `Star` and `RatingWidget` components from one of my [previous articles](http://nayaabkhan.me/opinion/potayto-potahto).
 
-{% highlight js %}
+```js
 // star.js
 import React from 'react';
 
@@ -91,9 +91,9 @@ const Star = ({ isActive }) => {
 };
 
 export default Star;
-{% endhighlight %}
+```
 
-{% highlight js %}
+```js
 // rating-widget.js
 import React from 'react';
 import Star from './star';
@@ -114,28 +114,28 @@ const RatingWidget = ({ size, rating }) => {
 };
 
 export default RatingWidget;
-{% endhighlight %}
+```
 
 
 ### Setting up
 
 Let's begin with installing the necessary packages first.
 
-{% highlight sh %}
+```sh
 $ npm init -y
 $ npm install react --save
 $ npm install babel-cli babel-preset-react babel-preset-es2015 tape faucet extend-tape tape-jsx-equals react-addons-test-utils --save-dev
-{% endhighlight %}
+```
 
 Also create the two components we are testing in an `app` folder. Create a `test` folder in which we shall put our test files.
 
 You might have noticed we are installing `babel-cli` and a couple of presets for supporting React and ES2015 syntax. To enable the support let's create a `.babelrc` file:
 
-{% highlight json %}
+```json
 {
   "presets": ["es2015", "react"]
 }
-{% endhighlight %}
+```
 
 Now are ready to write some tests.
 
@@ -144,7 +144,7 @@ Now are ready to write some tests.
 
 Always begin writing tests for the components lower-most in the hierarchy. For us it is the `Star` component. So lets write a test to assert its output:
 
-{% highlight js %}
+```js
 // tests/star.test.js
 import tape from 'tape';
 import addAssertions from 'extend-tape';
@@ -169,11 +169,11 @@ test('Testing Star component output if isActive set', (assert) => {
   assert.jsxEquals(actual, expected, message);
   assert.end();
 });
-{% endhighlight %}
+```
 
 I like to follow this template in every unit test I write. And I think you should follow it too. It makes the tests very readable and structured.
 
-{% highlight js %}
+```js
 test('Module aspect that I am testing', (assert) => {
   const message = 'Assertion message with expectation';
   const expected = 'expected value';
@@ -182,30 +182,30 @@ test('Module aspect that I am testing', (assert) => {
   assert.equals(actual, expected, message);
   assert.end();
 });
-{% endhighlight %}
+```
 
 Besides the testing code there is not much boilerplate, except these two lines that add `jsxEquals` to the assertion API.
 
-{% highlight js %}
+```js
 const test = addAssertions(tape, { jsxEquals });
 const renderer = createRenderer();
-{% endhighlight %}
+```
 
 ### Running the tests
 
 Obviously we are not done with testing every aspect of our components. But let's first see how to run our test. Open up your `package.json` and find the `scripts` key. There should be a single script called `test` in it already. Right now it doesn't do anything useful but failing. Let's change it:
 
-{% highlight json %}
+```json
 {
   "test": "babel-node node_modules/.bin/tape tests/*.test.js | faucet"
 }
-{% endhighlight %}
+```
 
 We are using `babel-node` installed via the `babel-cli` to run our JavaScript files. We pass the `tape` script and our tests to it. Piping the output to `faucet` to make it more readable.
 
 Okay, so now run `npm test` to run the tests and you should see something like this:
 
-{% highlight text %}
+```text
 > react-unit-testing@1.0.0 test /Users/nayaabkhan/Desktop/react-unit-testing
 > babel-node node_modules/.bin/tape tests/*.test.js | faucet
 
@@ -213,11 +213,11 @@ Okay, so now run `npm test` to run the tests and you should see something like t
 # tests 1
 # pass  1
 ✓ ok
-{% endhighlight %}
+```
 
 Cool, our test is running fine and it is passing. Let's finish adding a few more test cases to the `star.test.js`.
 
-{% highlight js %}
+```js
 // case 2 when it is set as inactive
 test('Testing Star component output if isActive not set', (assert) => {
   renderer.render(<Star isActive={false} />);
@@ -241,11 +241,11 @@ test('Testing Star component output if isActive not specified', (assert) => {
   assert.jsxEquals(actual, expected, message);
   assert.end();
 });
-{% endhighlight %}
+```
 
 Let's also add a test for `RatingWidget` now.
 
-{% highlight js %}
+```js
 // tests/rating-widget.test.js
 import tape from 'tape';
 import addAssertions from 'extend-tape';
@@ -277,11 +277,11 @@ test('Testing RatingWidget component output', (assert) => {
   assert.jsxEquals(actual, expected, message);
   assert.end();
 });
-{% endhighlight %}
+```
 
 If you run the tests now, you should see all of them passing with flying colors.
 
-{% highlight text %}
+```text
 > react-unit-testing@1.0.0 test /Users/nayaabkhan/Desktop/react-unit-testing
 > babel-node node_modules/.bin/tape tests/*.test.js | faucet
 
@@ -292,11 +292,11 @@ If you run the tests now, you should see all of them passing with flying colors.
 # tests 4
 # pass  4
 ✓ ok
-{% endhighlight %}
+```
 
 That is all cool, but we haven't yet seen the most common and important part of running tests yet, failing. So let's say someone comes along and changes the `Star` component's active style from `star--active` to `star--is-active`, may be because it is more BEMMY™. The tests will fail with this report:
 
-{% highlight text %}
+```text
 > react-unit-testing@1.0.0 test /Users/nayaabkhan/Desktop/react-unit-testing
 > babel-node node_modules/.bin/tape tests/*.test.js | faucet
 
@@ -316,7 +316,7 @@ That is all cool, but we haven't yet seen the most common and important part of 
 # tests 4
 # pass  3
 ⨯ fail  1
-{% endhighlight %}
+```
 
 The output is so readable and has ample details of what has gone wrong. It prints out the expected and actual rendered outputs and now we know that either the tests need an update or the change needs to be reverted.
 

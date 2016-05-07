@@ -1,9 +1,9 @@
 /**
  * Syntax highlighting styles
  */
-.highlight { margin: 0; border-radius: 4px; }
-.highlight pre { padding: 25px; overflow-x: scroll; }
-.highlighter-rouge { border: 1px solid $border-color; border-radius: 4px; padding: 3px 5px; background-color: #fbfbfb; }
+.highlight { border-radius: 4px; }
+pre.highlight { padding: 25px; overflow-x: scroll; }
+code.highlighter-rouge { border: 1px solid $border-color; border-radius: 4px; padding: 3px 5px; background-color: #fbfbfb; }
 
 // paste below
 .highlight .hll { background-color: #4F5B66 }

@@ -19,15 +19,15 @@ Never ever forget that it is just a view library. It is *only* the "V" in the "M
 
 Let us take a basic example of how a component would look like. Say a Logo component.
 
-{% highlight html %}
+```html
 <div>
   <img src="/images/logo.svg"/>
 </div>
-{% endhighlight %}
+```
 
 You'd say, "Hey! That's just HTML". Yep, that's how our logo markup would look if I were to write it in HTML. Now let's make it a React component.
 
-{% highlight js %}
+```js
 var Logo = React.createClass({
   render: function() {
     return (
@@ -37,7 +37,7 @@ var Logo = React.createClass({
     );
   }
 });
-{% endhighlight %}
+```
 
 There you have it, your first React component. Now there are a few constructs worth explaining here:
 
@@ -47,7 +47,7 @@ There you have it, your first React component. Now there are a few constructs wo
 
 This is how it would look in JavaScript:
 
-{% highlight js %}
+```js
 var Logo = React.createClass({
   render: function() {
     return (
@@ -59,7 +59,7 @@ var Logo = React.createClass({
     );
   }
 });
-{% endhighlight %}
+```
 
 Not too shabby isn't it. I am sure you can see the correlation. I recommend beginners to try writing a few components without JSX. That way, you would really appreciate how much JSX does for you and even write better JSX as a result.
 
@@ -69,7 +69,7 @@ So we our component, how do we use it on a page. Okay let's do it.
 
 Let's setup a testing page. I would never recommend using it in prodcution, but it serves well as a playground to quickly jot down components. This is the `index.html`.
 
-{% highlight html %}
+```html
 <!DOCTYPE html>
 <html>
 <head>
@@ -86,7 +86,7 @@ Let's setup a testing page. I would never recommend using it in prodcution, but 
   <script type="text/babel" src="app.js"></script>
 </body>
 </html>
-{% endhighlight %}
+```
 
 So we include the necessary React libraries and an `app.js`. That's where we put our JavaScript and components. So create it as well. The `browser.js` from `babel-core` is used to support JSX syntax at runtime in the browser. Again, I recommend not to use it on production apps *ever*.
 
@@ -94,7 +94,7 @@ One important piece of the HTML is the `div` with ID `root`. We will use this el
 
 Now let's focus on the `app.js`. Here is how it looks:
 
-{% highlight js %}
+```js
 var Logo = React.createClass({
   render: function() {
     return (
@@ -109,7 +109,7 @@ ReactDOM.render(
   <Logo/>,
   document.getElementById('root')
 );
-{% endhighlight %}
+```
 
 You're already familiar with the first half of the code. But the second half is what's going to make our Logo component show up on the page. So, save this file and load up the page in your browser. You should be greeted with the React logo in all its glory. A job well done compadre. Let's move on.
 
@@ -119,7 +119,7 @@ Okay, so our logo is visible and looks good. How about making it possible to spe
 
 Let's add two attributes to our Logo component, `width` and `height` with obvious purposes.
 
-{% highlight js %}
+```js
 var Logo = React.createClass({
   render: function() {
     return (
@@ -137,7 +137,7 @@ ReactDOM.render(
   <Logo width={100} height={100}/>,
   document.getElementById('root')
 );
-{% endhighlight %}
+```
 
 Pretty simple eh? Some new concepts here:
 
@@ -159,7 +159,7 @@ But before we see an example, we must understand one important design choice mad
 
 Okay so with that fact out of the way, we can now see an example. A rule of thumb, if the component you want to develop has data that changes over time– e.g. a clock component, or a tab component, then you could use `state` to model those changes in React components. Let's see with an example.
 
-{% highlight js %}
+```js
 var Stepper = React.createClass({
   getInitialState: function() {
     return {
@@ -194,7 +194,7 @@ ReactDOM.render(
   <Stepper/>,
   document.getElementById('root')
 );
-{% endhighlight %}
+```
 
 A lot of new constructs here. Nothing too complicated going on, though. We have written a simple stepper component with two buttons– one to increment and another to decrement a value. Now here, the value is what changes over time, so that's our state. Now let's understand the new constructs:
 
