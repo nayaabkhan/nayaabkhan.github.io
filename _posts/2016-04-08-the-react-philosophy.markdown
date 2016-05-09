@@ -3,6 +3,7 @@ layout: post
 title: The React Philosophy
 category: React
 date: April 8, 2016
+hashtags: reactjs,javascript
 ---
 
 It's hard to imagine a conversation about React that would not involve terms like Virtual DOM, JSX aka inline HTML, and Server side rendering. I've seen people use these terms to differentiate React apart from other JS libraries or frameworks. But after using React for almost a year now, I can say with confidence that these aren't what make React so special.

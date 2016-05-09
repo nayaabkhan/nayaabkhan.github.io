@@ -3,6 +3,7 @@ layout: post
 title: React for absolute beginners
 category: React
 date: April 2, 2016
+hashtags: reactjs,javascript
 ---
 
 React JS is a powerful yet simple library. But when I talk to the guys just getting started with React, I often get a feeling that they have a lot of misconceptions and confusions about it. I don't blame them– React brings many radical new ideas with it.

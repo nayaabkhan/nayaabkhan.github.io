@@ -13,7 +13,7 @@
     <h4 class="post__sharer__subtitle">Then help spread it.</h4>
 
     {% capture full_url %}{{ include.post.url | prepend: site.url }}{% endcapture %}
-    {% include tweet-button.html text=include.post.title url=full_url via=site.twitter_username related=site.twitter_username %}
+    {% include tweet-button.html text=include.post.title url=full_url via=site.twitter_username related=site.twitter_username hashtags=include.post.hashtags %}
   </div>
 
   <div class="post__comments">

@@ -3,6 +3,7 @@ layout: post
 title: Unit Testing React Components
 category: React
 date: April 30, 2016
+hashtags: reactjs,unittesting,javascript
 ---
 
 React components are modular and composable. And Unit tests exist to tests software modules. Hence it makes React components a perfect candidate for Unit tests.
