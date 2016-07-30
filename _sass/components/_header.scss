@@ -8,7 +8,7 @@
   position: relative;
   height: 75px;
   line-height: 75px;
-  font-size: 14px;
+  font-size: 17px;
   font-weight: $font-weight-light;
 }
 
@@ -67,11 +67,13 @@
   margin: 58px 0 0;
   font-size: 38px;
   color: $brand-color;
+  text-transform: uppercase;
+  font-weight: $font-weight-bold;
 }
 
 .site-hero__subtitle {
   margin: 0;
   padding-bottom: 97px;
-  font-size: 16px;
+  font-size: 17px;
   font-weight: $font-weight-light;
 }

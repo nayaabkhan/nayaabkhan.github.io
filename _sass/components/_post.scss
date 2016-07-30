@@ -21,9 +21,12 @@ $post-sharer-border-length: 60px;
 .post__content h2,
 .post__content h3,
 .post__content h4 {
-  margin-top: $base-spacing * 1.5;
-  margin-bottom: $base-spacing / 1.5;
-  text-align: center;
+  margin-top: $base-spacing * 2;
+  margin-bottom: $base-spacing / 3;
+}
+
+.post__content h4 {
+  margin-top: $base-spacing;
 }
 
 .post__content img {

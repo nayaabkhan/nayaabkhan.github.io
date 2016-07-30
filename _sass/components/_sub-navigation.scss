@@ -1,7 +1,6 @@
+$height: 34px;
+
 .sub-navigation {
-  border-top: 1px solid #F0F0F0;
-  border-bottom: 1px solid #F0F0F0;
-  height: 60px;
   text-align: center;
   font-size: 0;
   background-color: $page-color;
@@ -9,21 +8,31 @@
 
 .sub-navigation__list {
   @extend %bare-list;
+
+  width: 100%;
+  display: table;
+  table-layout: fixed;
+  border: 1px solid $brand-color;
+  border-radius: 5px;
 }
 
 .sub-navigation__item {
   position: relative;
-  display: inline-block;
+  display: table-cell;
   margin: 0 15px;
-  text-transform: uppercase;
-  font-size: 11px;
+  font-size: 15px;
+  border-left: 1px solid $brand-color;
+
+  &:first-child {
+    border-left: 0;
+  }
 }
 
 .sub-navigation__link {
   display: block;
-  height: 60px;
-  line-height: 60px;
-  color: $text-color;
+  height: $height;
+  line-height: $height;
+  color: $brand-color;
 
   &:hover {
     color: $brand-color;
@@ -31,5 +40,10 @@
 }
 
 .sub-navigation__item--active a {
-  color: $brand-color;
+  background-color: $brand-color;
+  color: #fff;
+
+  &:hover {
+    color: #fff;
+  }
 }

@@ -1,6 +1,9 @@
 .post-listing {
   @extend %bare-list;
   @extend %clearfix;
+
+  margin-left: -2%;
+  margin-right: -2%;
 }
 
 .post-listing__item {
