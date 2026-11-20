@@ -1,0 +1,50 @@
+:root {
+  font-size: 18px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+body {
+  display: grid;
+  grid-template-columns: 1fr 70ch 1fr;
+  grid-template-areas:
+    "left_gutter header right_gutter"
+    "left_gutter main right_gutter";
+
+  font-family: "Times New Roman", Times, serif;
+}
+
+#page-header {
+  display: grid;
+  grid-template-areas:
+    "heading nav"
+    "subheading nav";
+  row-gap: 0.25rem;
+
+  grid-area: header;
+  padding-block: 1rem;
+}
+
+#nav {
+  display: flex;
+  gap: 1ch;
+  align-items: start;
+  justify-content: end;
+
+  grid-area: nav;
+}
+
+#nav > a {
+}
+
+#page-main {
+  grid-area: main;
+}
