@@ -88,15 +88,17 @@ a {
 
 body {
   display: grid;
-  grid-template-columns: 1fr 65ch 1fr;
+  grid-template-columns: minmax(1rem, 1fr) fit-content(65ch) minmax(1rem, 1fr);
   grid-template-areas:
     "lgutter header rgutter"
     "lgutter main rgutter";
 }
 
 #header {
-  display: grid;
-  grid-template-areas: "heading nav";
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
 
   grid-area: header;
   padding-block: 2rem;
@@ -118,9 +120,6 @@ body {
 #nav {
   display: flex;
   flex-direction: column;
-  align-items: end;
-
-  grid-area: nav;
 
   &>span {
     -webkit-user-select: all;
