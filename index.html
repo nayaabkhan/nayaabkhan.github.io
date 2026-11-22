@@ -2,26 +2,101 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8" />
-    <title>CV of nayaabKhan</title>
+    <title>CV of Nayaab Khan</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/styles.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@1..144,1..1000&display=swap"
+      rel="stylesheet"
+    />
   </head>
 
   <body>
-    <header id="page-header">
-      <h1>nayaabKhan / CV</h1>
-      <p>An Engineer, Designer, and Researcher.</p>
+    <header id="header">
+      <div>
+        <h1>CV of Nayaab Khan</h1>
+        <ol id="skills">
+          <li>Engineer</li>
+          <li>Designer</li>
+          <li>Tinkerer</li>
+        </ol>
+      </div>
 
       <nav id="nav">
-        <a href="https://github.com/nayaabkhan">GitHub</a>
-        <a href="mailto:nayaab@hey.com">Mail</a>
-        <a href="tel:+918511367421">Phone</a>
+        <span>khannayaab@gmail.com</span>
+        <span>+91 8511 367 421</span>
+        <a href="https://github.com/nayaabkhan" target="_blank">github.com/nayaabkhan</a>
       </nav>
     </header>
 
-    <main id="page-main">
-      I'm a design, developer, <em>tinkerer</em> from India.
+    <main id="main">
+      <section class="section">
+        <h2 class="sr-only">About</h2>
+        <p>
+          An engineer, designer, and <em>tinkerer</em> at heart, I’ve been making stuff on the internet since 2009. The
+          intersection where Product, Design, and Engineering meet is where I thrive. I love taking business problems,
+          researching, exploring solutions, and shipping the best solution to help businesses get where they want.
+        </p>
+
+        <center>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" height="340px">
+            <g fill-opacity="0.42" stroke-width="3">
+              <circle cx="300" cy="184.53" r="145" stroke="currentColor" fill="none" />
+              <circle cx="200" cy="357.74" r="145" stroke="currentColor" fill="none" />
+              <circle cx="400" cy="357.74" r="145" stroke="currentColor" fill="none" />
+            </g>
+
+            <g font-size="30" font-style="italic">
+              <text x="300" y="300" text-anchor="middle" dominant-baseline="central">Me</text>
+
+              <text x="300" y="184.53" text-anchor="middle" dominant-baseline="central">Product</text>
+              <text x="200" y="357.74" text-anchor="middle" dominant-baseline="central">Design</text>
+              <text x="400" y="357.74" text-anchor="middle" dominant-baseline="central">Code</text>
+            </g>
+          </svg>
+        </center>
+
+        <p>
+          In addition, I have learned the essential skill of
+          <a href="https://signalvnoise.com/posts/1430-hire-managers-of-one" target="_blank">managing oneself</a> thanks
+          to the 15+ years of working remotely.
+        </p>
+      </section>
+
+      <section id="highlights" class="section">
+        <h2>Highlights</h2>
+
+        <ol>
+          <li>
+            2014: Helped migrate from jQuery UI to Angular and speed up front-end development and improve UI
+            performance.
+          </li>
+          <li>
+            2016: Helped the business bump the conversion rate from 1.<em>x</em> % to 3.<em>x</em> % by fixing web site
+            performance and bugs on fragmented Android browsers found via BrowserStack.
+          </li>
+          <li>
+            2020: Implemented a new working process (<a href="https://basecamp.com/shapeup" target="_blank">Shape Up</a
+            >) to help the engineering and design team work closer together.
+          </li>
+        </ol>
+
+        <blockquote>
+          <p lang="en" dir="ltr">
+            Thanks to @iamnayaabkhan, we fixed a long running perf issue when building large CSS files in webpack with
+            🧁 vanilla-extract today. Any heavy Sprinkles users will likely see a decent start time speed up. So good
+            when open source works 😃
+          </p>
+          &mdash; Matt Jones (@mattcompiles)
+          <a href="https://x.com/mattcompiles/status/1504695053079707649?ref_src=twsrc%5Etfw">March 18, 2022</a>
+        </blockquote>
+      </section>
     </main>
   </body>
+
+  <script src="/script.js"></script>
 </html>

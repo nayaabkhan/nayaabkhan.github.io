@@ -1,5 +1,69 @@
+/* We used to start with a CSS reset or normalize, no more */
+
+@font-face {
+  src:
+    url("fonts/mrseaves.woff2") format("woff2"),
+    url("fonts/mrseaves.woff") format("woff");
+  font-family: "Mrs Eaves";
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  src:
+    url("fonts/mrseaves-bold.woff2") format("woff2"),
+    url("fonts/mrseaves-bold.woff") format("woff");
+  font-family: "Mrs Eaves";
+  font-style: normal;
+  font-weight: bold;
+}
+
+@font-face {
+  src:
+    url("fonts/mrseaves-italics.woff2") format("woff2"),
+    url("fonts/mrseaves-italics.woff") format("woff");
+  font-family: "Mrs Eaves";
+  font-style: italic;
+  font-weight: normal;
+}
+
+@font-face {
+  src:
+    url("fonts/cmunui.woff2") format("woff2"),
+    url("fonts/cmunui.woff") format("woff");
+  font-family: "Computer Modern";
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  src:
+    url("fonts/cmutui.woff2") format("woff2"),
+    url("fonts/cmutui.woff") format("woff");
+  font-family: "Computer Modern";
+  font-style: italic;
+  font-weight: normal;
+}
+
+/* But this is still needed, sadly. */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
 :root {
-  font-size: 18px;
+  font: 20px "Mrs Eaves", Times, serif;
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.25;
+  color: #101010;
 }
 
 h1,
@@ -8,43 +72,90 @@ h3,
 h4,
 h5,
 h6,
-p {
+p,
+ol,
+ul {
   margin: 0;
+  font-weight: normal;
+}
+
+a {
+  text-underline-offset: 4px;
+  text-decoration-style: dashed;
+  /* color-mix is my new favourite CSS feature */
+  text-decoration-color: color-mix(in srgb, currentColor 35%, transparent);
 }
 
 body {
   display: grid;
-  grid-template-columns: 1fr 70ch 1fr;
+  grid-template-columns: 1fr 65ch 1fr;
   grid-template-areas:
-    "left_gutter header right_gutter"
-    "left_gutter main right_gutter";
-
-  font-family: "Times New Roman", Times, serif;
+    "lgutter header rgutter"
+    "lgutter main rgutter";
 }
 
-#page-header {
+#header {
   display: grid;
-  grid-template-areas:
-    "heading nav"
-    "subheading nav";
-  row-gap: 0.25rem;
+  grid-template-areas: "heading nav";
 
   grid-area: header;
-  padding-block: 1rem;
+  padding-block: 2rem;
+}
+
+#skills {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+
+  & li:not(:last-child)::after {
+    content: "•";
+    margin-inline: 0.5ch;
+    opacity: 0.5;
+  }
 }
 
 #nav {
   display: flex;
-  gap: 1ch;
-  align-items: start;
-  justify-content: end;
+  flex-direction: column;
+  align-items: end;
 
   grid-area: nav;
+
+  &>span {
+    -webkit-user-select: all;
+    user-select: all;
+  }
 }
 
-#nav > a {
-}
+#main {
+  display: grid;
+  gap: 2rem;
 
-#page-main {
   grid-area: main;
+}
+
+#highlights {
+  & blockquote {
+    margin: 0;
+    padding: 1rem;
+    border: 1px solid black;
+  }
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.section {
+  display: grid;
+  gap: 1rem;
 }
