@@ -99,10 +99,27 @@ body {
   display: grid;
   grid-template-columns: minmax(1rem, 1fr) fit-content(65ch) minmax(1rem, 1fr);
   grid-template-areas:
+    "lgutter toolbar rgutter"
     "lgutter header rgutter"
     "lgutter nav rgutter"
     "lgutter main rgutter";
-  padding-block: 2rem;
+  row-gap: 2rem;
+  padding-block: 1rem;
+}
+
+#toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: end;
+
+  grid-area: toolbar;
+
+  button {
+    appearance: none;
+    background: none;
+    border: 1px solid currentColor;
+    text-box-trim: trim-end;
+  }
 }
 
 #header {
@@ -133,7 +150,6 @@ body {
     justify-content: center;
     list-style-type: none;
     gap: 1rem;
-    padding-block: 2rem;
   }
 
   li {
@@ -210,5 +226,17 @@ body {
 
   article h3 {
     font-weight: bold;
+  }
+}
+
+@media print {
+  :root {
+    font-size: 14px;
+  }
+
+  #nav,
+  #pde-chart,
+  #toolbar {
+    display: none;
   }
 }
