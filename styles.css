@@ -29,18 +29,27 @@
 
 @font-face {
   src:
-    url("fonts/cmunui.woff2") format("woff2"),
-    url("fonts/cmunui.woff") format("woff");
-  font-family: "Computer Modern";
+    url("fonts/OutputSans-Regular.woff2") format("woff2"),
+    url("fonts/OutputSans-Regular.woff") format("woff");
+  font-family: "Output Sans";
   font-style: normal;
   font-weight: normal;
 }
 
 @font-face {
   src:
-    url("fonts/cmutui.woff2") format("woff2"),
-    url("fonts/cmutui.woff") format("woff");
-  font-family: "Computer Modern";
+    url("fonts/OutputSans-Bold.woff2") format("woff2"),
+    url("fonts/OutputSans-Bold.woff") format("woff");
+  font-family: "Output Sans";
+  font-style: normal;
+  font-weight: bold;
+}
+
+@font-face {
+  src:
+    url("fonts/OutputSans-Italic.woff2") format("woff2"),
+    url("fonts/OutputSans-Italic.woff") format("woff");
+  font-family: "Output Sans";
   font-style: italic;
   font-weight: normal;
 }
@@ -110,7 +119,9 @@ body {
 #toolbar {
   display: flex;
   flex-wrap: wrap;
+  align-items: stretch;
   justify-content: end;
+  gap: 0.5rem;
 
   grid-area: toolbar;
 
@@ -119,6 +130,30 @@ body {
     background: none;
     border: 1px solid currentColor;
     text-box-trim: trim-end;
+  }
+}
+
+#font-switcher {
+  display: flex;
+  align-items: stretch;
+
+  input {
+    appearance: none;
+    margin: 0;
+    width: 0;
+    height: 0;
+    opacity: 0;
+  }
+
+  label {
+    border: 1px solid #101010;
+    padding: 2px 8px;
+    text-box-trim: trim-end;
+
+    &:has(:checked) {
+      background-color: #101010;
+      color: white;
+    }
   }
 }
 
@@ -213,6 +248,7 @@ body {
 #technical-skills {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  gap: 2rem;
   align-items: start;
 
   h2 {
