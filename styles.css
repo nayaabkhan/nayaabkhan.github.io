@@ -247,13 +247,8 @@ body {
 
 #technical-skills {
   display: grid;
-  grid-template-columns: 1fr 1fr;
   gap: 2rem;
   align-items: start;
-
-  h2 {
-    grid-column: span 2;
-  }
 
   article {
     display: grid;
@@ -264,6 +259,17 @@ body {
     font-weight: bold;
   }
 }
+
+@media (width >=70ch) {
+  #technical-skills {
+    grid-template-columns: 1fr 1fr;
+
+    h2 {
+      grid-column: span 2;
+    }
+  }
+}
+
 
 @media print {
   :root {
