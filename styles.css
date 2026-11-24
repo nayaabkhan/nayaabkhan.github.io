@@ -219,6 +219,31 @@ body {
   grid-area: main;
 }
 
+#about {
+  display: grid;
+  grid-template-areas: "para" "figure";
+
+  #paragroup {
+    grid-area: para;
+
+    p {
+      margin-bottom: 1rem;
+    }
+  }
+
+  svg {
+    width: 100%;
+    grid-area: figure;
+  }
+}
+
+@media (width >=70ch) {
+  #about {
+    grid-template-areas: "para figure";
+    grid-template-columns: auto 350px;
+  }
+}
+
 #highlights {
   & blockquote {
     margin: 0;
