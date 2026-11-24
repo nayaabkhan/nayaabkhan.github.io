@@ -95,6 +95,10 @@ ul {
 
 li {
   margin-bottom: 0.5rem;
+
+  &::marker {
+    color: color-mix(in srgb, currentColor 40%, transparent);
+  }
 }
 
 a {
@@ -232,6 +236,12 @@ body {
 .section {
   display: grid;
   gap: 1rem;
+
+  h2 {
+    position: sticky;
+    top: 0;
+    background-color: white;
+  }
 }
 
 #work-history {
