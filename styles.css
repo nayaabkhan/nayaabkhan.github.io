@@ -75,7 +75,7 @@ a {
 :root {
   font: 20px "Mrs Eaves", Times, serif;
   -webkit-font-smoothing: antialiased;
-  line-height: 1.25;
+  line-height: 1.45;
   color: #101010;
 }
 
@@ -115,7 +115,8 @@ body {
     "lgutter toolbar rgutter"
     "lgutter header rgutter"
     "lgutter nav rgutter"
-    "lgutter main rgutter";
+    "lgutter main rgutter"
+    "lgutter footer rgutter";
   row-gap: 2rem;
   padding-block: 1rem;
 }
@@ -168,6 +169,10 @@ body {
   gap: 1rem;
 
   grid-area: header;
+}
+
+#footer {
+  grid-area: footer;
 }
 
 #skills {
